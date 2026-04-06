@@ -2,7 +2,7 @@ import { Header, Footer, HeroSection, AboutSection, ProjectsSection, ContactSect
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen font-sans bg-linear-to-b from-slate-50 via-white to-slate-100 text-slate-900 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="flex flex-col min-h-screen font-sans bg-black text-white">
       <Header />
 
       <main className="flex-1">
