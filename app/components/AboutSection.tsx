@@ -6,13 +6,13 @@ export default function AboutSection() {
           <div className="space-y-8">
             <div className="rounded-4xl bg-white dark:bg-slate-950 border border-slate-200/80 dark:border-slate-800 p-10 shadow-lg shadow-slate-900/5">
               <img
-                src="/poto.png"
+                src="/fotowisuda.jpeg"
                 alt="Foto diri"
                 className="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg"
               />
               <h3 className="text-4xl font-semibold text-slate-950 dark:text-white text-center">About me</h3>
               <p className="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-300 text-center">
-                Saya seorang developer yang fokus pada desain yang elegan, kode yang bersih, dan performa tinggi. Saya membantu brand membangun aplikasi yang mudah digunakan dan siap produksi.
+                Saya seorang WEB developer yang fokus pada desain yang elegan, kode yang bersih, dan performa tinggi. Saya membantu brand membangun aplikasi yang mudah digunakan dan siap produksi.
               </p>
             </div>
           </div>

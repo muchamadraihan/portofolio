@@ -20,7 +20,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="primary" size="large">
+              <Button variant="primary" size="large" href="/Resume Moch Raihan.pdf" target="_blank">
                 Lihat Portofolio
               </Button>
               <Button variant="outline" size="large">

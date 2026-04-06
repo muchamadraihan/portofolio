@@ -10,7 +10,7 @@ export default function Header() {
           </div>
           <div>
             <p className="text-sm font-semibold tracking-[0.22em] uppercase text-slate-900 dark:text-white">
-              Golek Gawean
+              Mochamad Raihan Mukhorobun
             </p>
             <p className="text-xs text-slate-500 dark:text-slate-400">
               Digital Product Studio
