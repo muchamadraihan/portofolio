@@ -30,12 +30,6 @@ export default function Header() {
           </a>
         </nav>
 
-        <a
-          href="#contact"
-          className="inline-flex items-center justify-center rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/20 transition hover:bg-emerald-700"
-        >
-          Hire me
-        </a>
       </div>
     </header>
   );

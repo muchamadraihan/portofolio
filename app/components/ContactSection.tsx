@@ -13,55 +13,8 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-12 lg:grid-cols-2 items-start">
-          <div className="space-y-8 animate-slide-in-left">
-            <div className="rounded-4xl border-2 border-emerald-500/30 bg-zinc-900 p-8 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 hover:border-emerald-500/50 transition-all">
-              <h4 className="text-2xl font-semibold text-white">Kirim pesan</h4>
-              <form className="mt-6 space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-300">
-                    Nama
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    className="mt-2 block w-full rounded-lg border-2 border-emerald-300/50 dark:border-emerald-700/50 bg-white dark:bg-slate-800 px-4 py-3 text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
-                    placeholder="Nama Anda"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-300">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="mt-2 block w-full rounded-lg border-2 border-emerald-700/50 bg-black px-4 py-3 text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
-                    placeholder="email@anda.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-300">
-                    Pesan
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="mt-2 block w-full rounded-lg border-2 border-emerald-700/50 bg-black px-4 py-3 text-white placeholder-slate-500 focus:border-emerald-500 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all"
-                    placeholder="Ceritakan tentang proyek Anda..."
-                  />
-                </div>
-                <Button variant="primary" size="large" type="submit">
-                  Kirim Pesan
-                </Button>
-              </form>
-            </div>
-          </div>
-
-          <div className="space-y-8 animate-slide-in-right">
+        <div className="mt-16">
+          <div className="grid gap-12 lg:grid-cols-2 animate-slide-in-right">
             <div className="rounded-4xl border-2 border-emerald-500/30 bg-zinc-900 p-8 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 hover:border-emerald-500/50 transition-all">
               <h4 className="text-2xl font-semibold text-white">Informasi kontak</h4>
               <div className="mt-6 space-y-4">

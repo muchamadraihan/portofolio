@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #702626;
+  --background: #000000;
   --foreground: #171717;
   --font-geist-sans: system-ui, -apple-system, sans-serif;
   --font-geist-mono: ui-monospace, monospace;
@@ -11,7 +11,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #702626;
+    --background: #000000;
     --foreground: #ededed;
   }
 }

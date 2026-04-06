@@ -12,10 +12,10 @@ export default function HeroSection() {
             </span>
             <div className="animate-fade-up animate-delay-100">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
-                Hi, I&apos;m a Developer <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-emerald-400">creating polished</span> digital products.
+                Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-emerald-400">Mochamad Raihan</span> Mukhorobun
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                Saya membuat aplikasi web yang cepat, responsif, dan mudah digunakan menggunakan Next.js, TypeScript, dan Tailwind CSS.
+                Saya seorang Web Developer, yang membangun berberagam aplikasi berbasis website yang fungsional dan menarik.
               </p>
             </div>
 
@@ -28,18 +28,21 @@ export default function HeroSection() {
               </Button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-400">24+</p>
-                <p className="mt-2 text-sm text-slate-400">Proyek selesai</p>
+            <div className="grid grid-cols-2 gap-4 mt-8">
+              <div className="rounded-2xl bg-zinc-900 border-2 border-emerald-500/30 p-6 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300 flex flex-col items-center justify-center">
+                <svg className="w-8 h-8 text-emerald-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p className="text-sm font-semibold text-white text-center">Surakarta</p>
+                <p className="text-xs text-slate-400 text-center mt-1">Jawa Tengah</p>
               </div>
-              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-400">6</p>
-                <p className="mt-2 text-sm text-slate-400">Klien aktif</p>
-              </div>
-              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-400">4+</p>
-                <p className="mt-2 text-sm text-slate-400">Tahun pengalaman</p>
+              <div className="rounded-2xl bg-zinc-900 border-2 border-emerald-500/30 p-6 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300 flex flex-col items-center justify-center">
+                <svg className="w-8 h-8 text-emerald-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z" />
+                </svg>
+                <p className="text-sm font-semibold text-white text-center">UMS</p>
+                <p className="text-xs text-slate-400 text-center mt-1">Informatika '26</p>
               </div>
             </div>
           </div>
@@ -47,19 +50,25 @@ export default function HeroSection() {
           <div className="rounded-4xl bg-linear-to-br from-emerald-700 via-emerald-600 to-emerald-800 p-8 shadow-2xl shadow-emerald-600/30 text-white animate-slide-in-right hover:shadow-emerald-600/50 transition-all">
             <div className="h-full rounded-[1.75rem] border border-white/10 bg-emerald-950/80 p-8 flex flex-col justify-between backdrop-blur">
               <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-emerald-200">Featured project</p>
-                <h2 className="mt-4 text-3xl font-semibold">Portofolio UI Redesign</h2>
+                <p className="text-sm uppercase tracking-[0.3em] text-emerald-200">Keahlian Saya</p>
+                <h2 className="mt-4 text-3xl font-semibold">Teknologi & Tools</h2>
                 <p className="mt-3 text-emerald-100">
-                  Sebuah landing page modern dengan visual yang bersih, tipografi kuat, dan interaksi yang halus.
+                  Stack lengkap yang saya kuasai untuk membangun aplikasi web modern dan berkualitas tinggi.
                 </p>
               </div>
 
-              <div className="mt-8 grid gap-3">
-                <div className="rounded-3xl bg-white/5 hover:bg-white/10 transition-all p-4 text-sm text-emerald-100 border border-white/10">
-                  Tech stack: Next.js · TypeScript · Tailwind CSS
-                </div>
-                <div className="rounded-3xl bg-white/5 hover:bg-white/10 transition-all p-4 text-sm text-emerald-100 border border-white/10">
-                  Outcome: UX terfokus, UI profesional, performa lancar.
+              <div className="mt-8">
+                <div className="flex flex-wrap gap-2">
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Laravel</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">PHP</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">HTML</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">CSS</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">JavaScript</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">React</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Next.js</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">TypeScript</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Tailwind CSS</span>
+                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">MySQL</span>
                 </div>
               </div>
             </div>
