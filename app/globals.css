@@ -1,25 +1,49 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
-  --foreground: #171717;
+  --background: #09090b;
+  --foreground: #ededed;
   --font-geist-sans: system-ui, -apple-system, sans-serif;
   --font-geist-mono: ui-monospace, monospace;
   --color-accent-green: #10b981;
   --color-accent-emerald: #059669;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background-color: #09090b;
+  background-image:
+    /* noise texture layer */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
+    /* main emerald glows */
+    radial-gradient(ellipse 80% 60% at 90% 5%,  rgba(16,185,129,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 70% 50% at 5%  90%,  rgba(5,150,105,0.10) 0%, transparent 55%),
+    /* subtle mid accent */
+    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(16,185,129,0.04) 0%, transparent 60%),
+    /* deep blue-green tint at very bottom */
+    radial-gradient(ellipse 100% 30% at 50% 100%, rgba(6,78,59,0.25) 0%, transparent 70%);
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+/* Subtle grid overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ensure content sits above the grid */
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Animations */

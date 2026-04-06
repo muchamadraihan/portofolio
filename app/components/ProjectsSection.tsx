@@ -8,7 +8,6 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="px-6 pb-24 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.05),transparent_50%)] pointer-events-none" />
       <div className="mx-auto max-w-6xl relative">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-12 animate-fade-down">
           <div>

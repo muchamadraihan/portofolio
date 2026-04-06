@@ -3,7 +3,6 @@
 export default function AboutSection() {
   return (
     <section id="about" className="px-6 py-24 relative">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(16,185,129,0.05),transparent_50%)] pointer-events-none" />
       <div className="mx-auto max-w-6xl relative">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr] items-stretch">
           <div className="rounded-4xl bg-zinc-900 border-2 border-emerald-500/30 p-10 shadow-lg shadow-emerald-500/10 hover:shadow-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300 animate-slide-in-left flex flex-col">

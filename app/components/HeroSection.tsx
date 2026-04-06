@@ -1,78 +1,150 @@
+import { MapPin, GraduationCap, ArrowRight, Mail, Code2, Layers, Database, Sparkles } from "lucide-react";
 import { Button } from "./index";
+
+const skills = [
+  "Laravel", "PHP", "HTML", "CSS", "JavaScript",
+  "React", "Next.js", "TypeScript", "Tailwind CSS", "MySQL",
+];
 
 export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(16,185,129,0.1),transparent_36%)] pointer-events-none" />
-      <div className="max-w-7xl mx-auto px-6 py-24 lg:px-8">
-        <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] items-center">
+    <section className="relative overflow-hidden min-h-screen flex items-center">
+
+      <div className="max-w-7xl mx-auto px-6 py-24 lg:px-8 w-full">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] items-center">
+
+          {/* ── Left column ── */}
           <div className="space-y-8">
-            <span className="inline-flex items-center gap-2 rounded-full bg-linear-to-r from-emerald-600 to-emerald-500 text-white px-4 py-2 text-sm font-semibold shadow-lg shadow-emerald-500/30 animate-fade-up">
-              Build modern web experiences
-            </span>
-            <div className="animate-fade-up animate-delay-100">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
-                Hi, I&apos;m <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-emerald-400">Mochamad Raihan</span> Mukhorobun
+            {/* Badge */}
+            <div className="animate-fade-up">
+              <span className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
+                <Sparkles className="w-3.5 h-3.5" />
+                Available for freelance work
+              </span>
+            </div>
+
+            {/* Heading */}
+            <div className="animate-fade-up animate-delay-100 space-y-4">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.08]">
+                Hi, I&apos;m{" "}
+                <span className="relative inline-block">
+                  <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-emerald-300">
+                    Raihan
+                  </span>
+                  <span className="absolute -bottom-1 left-0 w-full h-px bg-linear-to-r from-emerald-400/60 to-transparent" />
+                </span>
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                Saya seorang Web Developer, yang membangun berberagam aplikasi berbasis website yang fungsional dan menarik.
+              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-300">
+                Full-Stack Web Developer
+              </h2>
+              <p className="max-w-xl text-base leading-7 text-slate-400">
+                Membangun aplikasi web yang fungsional, elegan, dan production-ready. Dari desain UI hingga backend dan database.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4 animate-fade-up animate-delay-200">
-              <Button variant="primary" size="large" href="/Resume Moch Raihan.pdf" target="_blank">
-                Lihat Portofolio
-              </Button>
-              <Button variant="outline" size="large">
+            {/* CTA buttons */}
+            <div className="flex flex-wrap gap-3 animate-fade-up animate-delay-200">
+              <a
+                href="/Resume Moch Raihan.pdf"
+                target="_blank"
+                className="inline-flex items-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-zinc-950 font-semibold px-6 py-3 text-sm shadow-lg shadow-emerald-500/30 hover:shadow-emerald-400/40 transition-all duration-200"
+              >
+                Download CV
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 font-semibold px-6 py-3 text-sm backdrop-blur-sm transition-all duration-200"
+              >
+                <Mail className="w-4 h-4" />
                 Hubungi Saya
-              </Button>
+              </a>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="rounded-2xl bg-zinc-900 border-2 border-emerald-500/30 p-6 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300 flex flex-col items-center justify-center">
-                <svg className="w-8 h-8 text-emerald-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <p className="text-sm font-semibold text-white text-center">Surakarta</p>
-                <p className="text-xs text-slate-400 text-center mt-1">Jawa Tengah</p>
+            {/* Info cards */}
+            <div className="grid grid-cols-2 gap-3 animate-fade-up animate-delay-300">
+              <div className="flex items-center gap-3 rounded-2xl bg-zinc-900/80 border border-zinc-700/60 hover:border-emerald-500/40 px-4 py-3.5 transition-all duration-200 group">
+                <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
+                  <MapPin className="w-4 h-4 text-emerald-400" />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">Surakarta</p>
+                  <p className="text-xs text-slate-500">Jawa Tengah</p>
+                </div>
               </div>
-              <div className="rounded-2xl bg-zinc-900 border-2 border-emerald-500/30 p-6 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300 flex flex-col items-center justify-center">
-                <svg className="w-8 h-8 text-emerald-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z" />
-                </svg>
-                <p className="text-sm font-semibold text-white text-center">UMS</p>
-                <p className="text-xs text-slate-400 text-center mt-1">Informatika '26</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="rounded-4xl bg-linear-to-br from-emerald-700 via-emerald-600 to-emerald-800 p-8 shadow-2xl shadow-emerald-600/30 text-white animate-slide-in-right hover:shadow-emerald-600/50 transition-all">
-            <div className="h-full rounded-[1.75rem] border border-white/10 bg-emerald-950/80 p-8 flex flex-col justify-between backdrop-blur">
-              <div>
-                <p className="text-sm uppercase tracking-[0.3em] text-emerald-200">Keahlian Saya</p>
-                <h2 className="mt-4 text-3xl font-semibold">Teknologi & Tools</h2>
-                <p className="mt-3 text-emerald-100">
-                  Stack lengkap yang saya kuasai untuk membangun aplikasi web modern dan berkualitas tinggi.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Laravel</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">PHP</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">HTML</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">CSS</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">JavaScript</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">React</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Next.js</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">TypeScript</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">Tailwind CSS</span>
-                  <span className="rounded-full bg-emerald-400/20 border border-emerald-400/50 px-3 py-1.5 text-xs font-semibold text-emerald-200 hover:bg-emerald-400/30 transition-colors">MySQL</span>
+              <div className="flex items-center gap-3 rounded-2xl bg-zinc-900/80 border border-zinc-700/60 hover:border-emerald-500/40 px-4 py-3.5 transition-all duration-200 group">
+                <span className="flex items-center justify-center w-9 h-9 rounded-xl bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500/20 transition-colors">
+                  <GraduationCap className="w-4 h-4 text-emerald-400" />
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-white">UMS</p>
+                  <p className="text-xs text-slate-500">Informatika &apos;26</p>
                 </div>
               </div>
             </div>
           </div>
+
+          {/* ── Right column — Skills card ── */}
+          <div className="animate-slide-in-right">
+            <div className="relative rounded-3xl border border-zinc-700/60 bg-zinc-900/90 p-8 shadow-2xl backdrop-blur-sm overflow-hidden">
+              {/* Card glow */}
+              <div className="absolute -top-20 -right-20 w-48 h-48 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-16 -left-16 w-40 h-40 rounded-full bg-emerald-600/8 blur-3xl pointer-events-none" />
+
+              {/* Card header */}
+              <div className="relative flex items-center gap-3 mb-6">
+                <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/30">
+                  <Code2 className="w-5 h-5 text-emerald-400" />
+                </span>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.25em] text-emerald-400 font-bold">Tech Stack</p>
+                  <h3 className="text-lg font-bold text-white">Teknologi &amp; Tools</h3>
+                </div>
+              </div>
+
+              <p className="relative text-sm text-slate-400 leading-6 mb-6">
+                Stack yang saya kuasai untuk membangun aplikasi web modern, dari frontend hingga backend.
+              </p>
+
+              {/* Skill badges */}
+              <div className="relative flex flex-wrap gap-2 mb-8">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="rounded-lg border border-emerald-500/25 bg-emerald-500/8 px-3 py-1.5 text-xs font-semibold text-emerald-300 hover:border-emerald-400/50 hover:bg-emerald-500/15 hover:text-emerald-200 transition-all duration-150 cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              {/* Stats row */}
+              <div className="relative grid grid-cols-3 gap-3 pt-6 border-t border-zinc-700/60">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <Layers className="w-3.5 h-3.5 text-emerald-400" />
+                  </div>
+                  <p className="text-xl font-bold text-white">10+</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Technologies</p>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <Code2 className="w-3.5 h-3.5 text-emerald-400" />
+                  </div>
+                  <p className="text-xl font-bold text-white">15+</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Projects</p>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    <Database className="w-3.5 h-3.5 text-emerald-400" />
+                  </div>
+                  <p className="text-xl font-bold text-white">Full</p>
+                  <p className="text-xs text-slate-500 mt-0.5">Stack</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

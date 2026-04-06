@@ -52,7 +52,7 @@ export const projects: Project[] = [
     id: "arsiparis",
     title: "Arsiparis",
     category: "Document Management System",
-    description: "Platform digital untuk manajemen arsip dan dokumen dengan fitur search, kategorisasi, dan access control.",
+    description: "Platform digital untuk manajemen arsip dan dokumen dengan fitur search, kategorisasi, dan access control untuk Kementerian Agama Kota Surakarta.",
     longDescription: `Arsiparis adalah sistem manajemen arsip digital yang komprehensif untuk organisasi yang membutuhkan penyimpanan, pengorganisasian, dan retrieval dokumen yang efisien.
 
 ## Fitur Utama
