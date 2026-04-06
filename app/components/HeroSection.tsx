@@ -11,10 +11,10 @@ export default function HeroSection() {
               Build modern web experiences
             </span>
             <div className="animate-fade-up animate-delay-100">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-950 dark:text-white">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
                 Hi, I&apos;m a Developer <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-600 to-emerald-400">creating polished</span> digital products.
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
                 Saya membuat aplikasi web yang cepat, responsif, dan mudah digunakan menggunakan Next.js, TypeScript, dan Tailwind CSS.
               </p>
             </div>
@@ -29,17 +29,17 @@ export default function HeroSection() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-              <div className="rounded-3xl bg-linear-to-br from-white/95 to-white/85 dark:from-slate-900/90 dark:to-slate-900/70 border-2 border-emerald-500/30 dark:border-emerald-500/20 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">24+</p>
-                <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Proyek selesai</p>
+              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
+                <p className="text-3xl font-bold text-emerald-400">24+</p>
+                <p className="mt-2 text-sm text-slate-400">Proyek selesai</p>
               </div>
-              <div className="rounded-3xl bg-linear-to-br from-white/95 to-white/85 dark:from-slate-900/90 dark:to-slate-900/70 border-2 border-emerald-500/30 dark:border-emerald-500/20 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">6</p>
-                <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Klien aktif</p>
+              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
+                <p className="text-3xl font-bold text-emerald-400">6</p>
+                <p className="mt-2 text-sm text-slate-400">Klien aktif</p>
               </div>
-              <div className="rounded-3xl bg-linear-to-br from-white/95 to-white/85 dark:from-slate-900/90 dark:to-slate-900/70 border-2 border-emerald-500/30 dark:border-emerald-500/20 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
-                <p className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">4+</p>
-                <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">Tahun pengalaman</p>
+              <div className="rounded-3xl bg-zinc-900 border-2 border-emerald-500/30 p-5 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all animate-fade-up animate-delay-300">
+                <p className="text-3xl font-bold text-emerald-400">4+</p>
+                <p className="mt-2 text-sm text-slate-400">Tahun pengalaman</p>
               </div>
             </div>
           </div>

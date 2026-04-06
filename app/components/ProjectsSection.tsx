@@ -12,10 +12,10 @@ export default function ProjectsSection() {
       <div className="mx-auto max-w-6xl relative">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between mb-12 animate-fade-down">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-emerald-600 dark:text-emerald-400 font-semibold">Featured projects</p>
-            <h3 className="mt-3 text-4xl font-bold text-slate-950 dark:text-white">Project showcase</h3>
+            <p className="text-sm uppercase tracking-[0.25em] text-emerald-400 font-semibold">Featured projects</p>
+            <h3 className="mt-3 text-4xl font-bold text-white">Project showcase</h3>
           </div>
-          <Button variant="outline" size="medium" href="/projects" className="border-emerald-500 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30">
+          <Button variant="outline" size="medium" href="/projects" className="border-emerald-500 text-emerald-400 hover:bg-emerald-950/30">
             Lihat semua proyek →
           </Button>
         </div>
@@ -23,16 +23,16 @@ export default function ProjectsSection() {
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {displayedProjects.map((project, index) => (
             <Link key={`${project.id}-${index}`} href={`/projects/${project.id}`}>
-              <article className={`rounded-4xl border-2 border-emerald-500/30 dark:border-emerald-500/20 bg-linear-to-br from-white to-white/95 dark:from-slate-900 dark:to-slate-950 p-8 shadow-sm hover:shadow-emerald-500/20 hover:border-emerald-500/50 transition-all cursor-pointer h-full animate-fade-up ${index === 1 || index === 3 ? 'animate-delay-100' : index === 2 || index === 4 ? 'animate-delay-200' : 'animate-delay-300'}`}>
-                <div className="h-52 rounded-3xl bg-linear-to-br from-emerald-200 via-emerald-300 to-emerald-400 dark:from-emerald-900 dark:via-emerald-800 dark:to-emerald-900 mb-6 hover:shadow-lg hover:shadow-emerald-500/20 transition-all" />
-                <h4 className="text-2xl font-semibold text-slate-950 dark:text-white">{project.title}</h4>
-                <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-2 mb-2">{project.category}</p>
-                <p className="mt-3 text-slate-600 dark:text-slate-300">
+              <article className={`rounded-4xl border-2 border-emerald-500/30 bg-zinc-900 p-8 shadow-sm hover:shadow-emerald-500/20 hover:border-emerald-500/50 transition-all cursor-pointer h-full animate-fade-up ${index === 1 || index === 3 ? 'animate-delay-100' : index === 2 || index === 4 ? 'animate-delay-200' : 'animate-delay-300'}`}>
+                <div className="h-52 rounded-3xl bg-linear-to-br from-emerald-900 via-emerald-800 to-emerald-900 mb-6 hover:shadow-lg hover:shadow-emerald-500/20 transition-all" />
+                <h4 className="text-2xl font-semibold text-white">{project.title}</h4>
+                <p className="text-sm font-semibold text-emerald-400 mt-2 mb-2">{project.category}</p>
+                <p className="mt-3 text-slate-300">
                   {project.description}
                 </p>
-                <div className="mt-6 flex flex-wrap gap-2 text-sm text-slate-600 dark:text-slate-400">
+                <div className="mt-6 flex flex-wrap gap-2 text-sm text-slate-400">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="rounded-full bg-emerald-100 dark:bg-emerald-950/50 px-3 py-1 text-emerald-700 dark:text-emerald-300 border border-emerald-300/50 dark:border-emerald-700/50">
+                    <span key={tech} className="rounded-full bg-emerald-950/50 px-3 py-1 text-emerald-300 border border-emerald-700/50">
                       {tech}
                     </span>
                   ))}
