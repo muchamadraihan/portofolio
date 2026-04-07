@@ -1,43 +1,46 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
-  --background: #09090b;
+  --background: #0c0800;
   --foreground: #ededed;
   --font-geist-sans: system-ui, -apple-system, sans-serif;
   --font-geist-mono: ui-monospace, monospace;
-  --color-accent-green: #10b981;
-  --color-accent-emerald: #059669;
+  --color-accent-amber: #f59e0b;
+  --color-accent-orange: #ea580c;
 }
 
 body {
-  background-color: #09090b;
+  /* base: deep warm dark, bukan hitam polos */
+  background-color: #0c0800;
   background-image:
-    /* noise texture layer */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
-    /* main emerald glows */
-    radial-gradient(ellipse 80% 60% at 90% 5%,  rgba(16,185,129,0.14) 0%, transparent 55%),
-    radial-gradient(ellipse 70% 50% at 5%  90%,  rgba(5,150,105,0.10) 0%, transparent 55%),
-    /* subtle mid accent */
-    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(16,185,129,0.04) 0%, transparent 60%),
-    /* deep blue-green tint at very bottom */
-    radial-gradient(ellipse 100% 30% at 50% 100%, rgba(6,78,59,0.25) 0%, transparent 70%);
+    /* noise texture */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E"),
+    /* amber burst – top right */
+    radial-gradient(ellipse 70% 55% at 95% 0%,   rgba(245,158,11,0.22) 0%, transparent 60%),
+    /* orange burst – bottom left */
+    radial-gradient(ellipse 65% 50% at 0%  100%,  rgba(234,88,12,0.18) 0%, transparent 60%),
+    /* warm amber glow – center top */
+    radial-gradient(ellipse 80% 40% at 50% 0%,   rgba(251,191,36,0.08) 0%, transparent 55%),
+    /* deep orange tint – center bottom */
+    radial-gradient(ellipse 100% 35% at 50% 100%, rgba(154,52,18,0.30) 0%, transparent 65%),
+    /* subtle mid warmth */
+    radial-gradient(ellipse 60% 50% at 50% 50%,  rgba(245,158,11,0.03) 0%, transparent 70%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
 }
 
-/* Subtle grid overlay */
+/* Subtle dot grid overlay */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(16,185,129,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16,185,129,0.03) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-image: radial-gradient(circle, rgba(245,158,11,0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.4;
 }
 
 /* Ensure content sits above the grid */
@@ -111,10 +114,10 @@ body > * {
 
 @keyframes glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(16, 185, 129, 0.5);
+    box-shadow: 0 0 5px rgba(245,158,11, 0.5);
   }
   50% {
-    box-shadow: 0 0 20px rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 20px rgba(245,158,11, 0.8);
   }
 }
 

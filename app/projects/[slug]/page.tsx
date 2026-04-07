@@ -1,4 +1,4 @@
-import { projects } from "@/app/data/projects";
+﻿import { projects } from "@/app/data/projects";
 import Link from "next/link";
 
 export function generateStaticParams() {
@@ -16,7 +16,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white">404</h1>
           <p className="mt-2 text-slate-400">Project tidak ditemukan</p>
-          <Link href="/" className="mt-4 inline-block text-emerald-400 hover:text-emerald-300 transition">
+          <Link href="/" className="mt-4 inline-block text-amber-400 hover:text-amber-300 transition">
             Kembali ke beranda
           </Link>
         </div>
@@ -29,7 +29,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
       <div className="max-w-4xl mx-auto px-6 py-12 lg:px-8">
         <Link
           href="/#projects"
-          className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 transition mb-8"
+          className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition mb-8"
         >
           <span>←</span>
           <span>Kembali ke Projects</span>
@@ -37,12 +37,26 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
 
         <article className="prose prose-slate dark:prose-invert max-w-none text-white">
           <div className="mb-8">
-            <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-emerald-600 rounded-full mb-4">
+            <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-amber-600 rounded-full mb-4">
               {project.category}
             </span>
-            <h1 className="text-5xl font-bold text-white mb-4">
+            <h1 className="text-5xl font-bold text-white mb-6">
               {project.title}
             </h1>
+
+            {/* Project image */}
+            {project.image ? (
+              <div className="mb-8 overflow-hidden rounded-2xl border border-amber-500/20 shadow-xl shadow-amber-500/10">
+                <img
+                  src={project.image}
+                  alt={`Screenshot ${project.title}`}
+                  className="w-full object-cover max-h-[480px]"
+                />
+              </div>
+            ) : (
+              <div className="mb-8 h-72 rounded-2xl bg-linear-to-br from-amber-950 via-orange-900/50 to-amber-950 border border-amber-500/20" />
+            )}
+
             <p className="text-lg text-slate-300 mb-6">
               {project.description}
             </p>
@@ -50,7 +64,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
               {project.technologies.map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 py-1 text-sm bg-emerald-950/50 text-emerald-300 rounded-full border border-emerald-700/50"
+                  className="px-3 py-1 text-sm bg-amber-950/50 text-amber-300 rounded-full border border-amber-700/50"
                 >
                   {tech}
                 </span>
@@ -58,7 +72,7 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
             </div>
           </div>
 
-          <div className="bg-zinc-900 border border-emerald-500/30 rounded-lg p-8 mb-8">
+          <div className="bg-zinc-900 border border-amber-500/30 rounded-lg p-8 mb-8">
             <div className="prose prose-slate dark:prose-invert max-w-none text-white">
               {project.longDescription.split("\n").map((line, idx) => {
                 if (line.startsWith("##")) {

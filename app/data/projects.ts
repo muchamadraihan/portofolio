@@ -16,7 +16,7 @@ export const projects: Project[] = [
     id: "simuda",
     title: " Perpustakaan SIMUDA",
     category: "Web Application",
-    description: "Sistem Informasi Manajemen perpustakaan untuk SMP Muhammadiyah 2 Kartasura.",
+    description: "SiMuda adalah Sistem Informasi Manajemen Perpustakaan berbasis web yang dirancang untuk mendigitalkan pengelolaan inventaris dan sirkulasi buku secara efisien. Fitur utama aplikasi ini mencakup sistem hak akses (multi-role) yang memisahkan dashboard analitik admin untuk pengelolaan terpusat (data buku, siswa, dan pelacakan sirkulasi/keterlambatan), dengan halaman katalog interaktif bergaya card-grid yang memudahkan siswa mencari, melihat detail ketersediaan stok, dan meminjam buku secara mandiri. Dibangun menggunakan tech stack Laravel (MySQL) di sisi backend untuk menjamin keamanan dan manajemen data yang tangguh, serta dipadukan dengan Tailwind CSS di sisi frontend, SiMuda menghadirkan antarmuka pengguna (UI) yang bersih, modern, dan sepenuhnya responsif di berbagai perangkat.",
     longDescription: `SIMUDA (Sistem Informasi Manajemen Unit Kerja) adalah aplikasi web yang dirancang untuk membantu organisasi dalam mengelola data, pelaporan, dan monitoring aktivitas unit kerja secara real-time.
 
 ## Fitur Utama
@@ -46,6 +46,7 @@ export const projects: Project[] = [
 - **Tantangan**: Integrasi dengan multiple data sources
 - **Solusi**: Membuat abstraction layer dan API gateway untuk unified data access`,
     technologies: ["Laravel", "PHP", "API WhatsApp", "MySql", "Tailwind CSS"],
+    image: "/projects/simuda.png",
     date: "2025",
   },
   {
@@ -98,6 +99,26 @@ export const projects: Project[] = [
 - User training penting untuk adoption rate tinggi
 - Monitoring dan maintenance berkelanjutan sangat penting`,
     technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Elasticsearch", "AWS S3"],
+    image: "/projects/arsiparis.png",
     date: "2024",
+  },
+  {
+    id: "konserin",
+    title: "Konser'in",
+    category: "Web Application",
+    description: "Platform tiket konser online yang memudahkan pencarian, pemesanan, dan pembayaran tiket konser.",
+    longDescription: `Konser'in adalah platform pemesanan tiket konser online yang dirancang untuk memberikan pengalaman terbaik bagi pecinta musik.
+
+## Fitur Utama
+- Deskripsi fitur bisa diisi di sini
+
+## Teknologi yang Digunakan
+- Deskripsi teknologi bisa diisi di sini
+
+## Hasil dan Impact
+- Deskripsi hasil bisa diisi di sini`,
+    technologies: ["Laravel", "PHP", "MySQL", "Tailwind CSS"],
+    image: "/projects/konserin.png",
+    date: "2025",
   },
 ];
