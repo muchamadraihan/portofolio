@@ -19,7 +19,7 @@ export default function HeroSection() {
             <div className="animate-fade-up">
               <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 text-amber-300 px-4 py-1.5 text-sm font-medium backdrop-blur-sm">
                 <Sparkles className="w-3.5 h-3.5" />
-                Available for freelance work
+                Available for work
               </span>
             </div>
 
