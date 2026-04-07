@@ -68,7 +68,7 @@ export default function HeroSection() {
                   <MapPin className="w-4 h-4 text-amber-400" />
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">Surakarta</p>
+                  <p className="text-sm font-semibold text-white">Sukoharjo</p>
                   <p className="text-xs text-slate-500">Jawa Tengah</p>
                 </div>
               </div>
