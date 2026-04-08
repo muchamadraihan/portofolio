@@ -53,7 +53,7 @@ export const projects: Project[] = [
     id: "arsiparis",
     title: "Arsiparis",
     category: "Document Management System",
-    description: "Platform digital untuk manajemen arsip dan dokumen dengan fitur search, kategorisasi, dan access control untuk Kementerian Agama Kota Surakarta.",
+    description: "Platform digital untuk manajemen arsip dan dokumen dengan fitur search, kategorisasi, dan access control untuk Kementerian Agama Kota Surakarta. aplikasi ini dirancang untuk memudahkan penyimpanan surat masuk dan keluar di Kementerian Agama Kota Surakarta.",
     longDescription: `Arsiparis adalah sistem manajemen arsip digital yang komprehensif untuk organisasi yang membutuhkan penyimpanan, pengorganisasian, dan retrieval dokumen yang efisien.
 
 ## Fitur Utama
@@ -98,7 +98,7 @@ export const projects: Project[] = [
 - OCR accuracy bergantung pada kualitas scan input
 - User training penting untuk adoption rate tinggi
 - Monitoring dan maintenance berkelanjutan sangat penting`,
-    technologies: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Elasticsearch", "AWS S3"],
+    technologies: ["Laravel", "PHP", "Tailwind CSS", "MySQL"],
     image: "/projects/arsiparis.png",
     date: "2024",
   },

@@ -5,8 +5,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-zinc-800/60 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-3xl bg-amber-600 text-white shadow-lg shadow-amber-600/30">
-            <span className="text-lg font-semibold">GG</span>
+          <div className="h-12 w-12 rounded-3xl overflow-hidden shadow-lg shadow-amber-600/30">
+            <img src="/fotowisuda.jpeg" alt="Mochamad Raihan" className="h-full w-full object-cover" />
           </div>
           <div>
             <p className="text-sm font-semibold tracking-[0.22em] uppercase text-white">

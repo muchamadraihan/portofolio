@@ -29,7 +29,7 @@ export default function HeroSection() {
                 Hi, I&apos;m{" "}
                 <span className="relative inline-block">
                   <span className="text-transparent bg-clip-text bg-linear-to-r from-amber-400 to-orange-400">
-                    Raihan
+                    Mochamad Raihan Mukhorobun
                   </span>
                   <span className="absolute -bottom-1 left-0 w-full h-px bg-linear-to-r from-orange-400/60 to-transparent" />
                 </span>

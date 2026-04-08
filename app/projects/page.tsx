@@ -3,7 +3,7 @@ import { projects } from "@/app/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-6 py-12 lg:px-8">
         <Link
           href="/"
@@ -13,49 +13,60 @@ export default function ProjectsPage() {
           <span>Kembali ke beranda</span>
         </Link>
 
+        {/* Page header */}
         <div className="mb-12">
-          <p className="text-sm uppercase tracking-[0.25em] text-amber-400">Semua proyek</p>
-          <h1 className="mt-3 text-5xl font-bold text-white">
-            Project Portfolio
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg text-slate-300">
+          <p className="text-sm uppercase tracking-[0.25em] text-amber-400 font-semibold">Semua proyek</p>
+          <h1 className="mt-3 text-5xl font-bold text-white">Project Portfolio</h1>
+          <p className="mt-4 max-w-2xl text-lg text-slate-300">
             Koleksi lengkap project yang telah saya kerjakan, mulai dari web application, sistem manajemen, hingga platform digital.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-1">
+        {/* Project list */}
+        <div className="flex flex-col gap-8">
           {projects.map((project) => (
             <Link key={project.id} href={`/projects/${project.id}`}>
-              <article className="rounded-2xl border border-amber-500/30 bg-zinc-900 p-8 shadow-sm transition hover:shadow-lg hover:shadow-amber-500/20 hover:-translate-y-1 cursor-pointer">
-                <div className="flex flex-col md:flex-row gap-8">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-4">
-                      <span className="inline-block px-3 py-1 text-sm font-semibold text-white bg-amber-600 rounded-full">
-                        {project.category}
-                      </span>
-                      <span className="text-sm text-slate-400">
-                        {project.date}
-                      </span>
-                    </div>
-                    <h2 className="text-3xl font-bold text-white mb-4">
-                      {project.title}
-                    </h2>
-                    <p className="text-lg text-slate-300 mb-6">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 text-sm bg-amber-950/50 text-amber-300 rounded-full border border-amber-700/50"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+              <article className="group rounded-3xl border-2 border-amber-500/30 bg-zinc-900 overflow-hidden shadow-sm hover:shadow-lg hover:shadow-amber-500/20 hover:border-amber-500/50 transition-all duration-300 cursor-pointer">
+
+                {/* Foto project — full width, tidak terpotong */}
+                {project.image ? (
+                  <div className="w-full bg-zinc-950/80 border-b border-amber-500/20">
+                    <img
+                      src={project.image}
+                      alt={`Screenshot ${project.title}`}
+                      className="w-full h-auto object-contain group-hover:scale-[1.01] transition-transform duration-500"
+                    />
                   </div>
-                  <div className="md:w-48 h-32 md:h-auto rounded-lg bg-linear-to-br from-amber-900 via-amber-800 to-amber-900 shrink-0" />
+                ) : (
+                  <div className="w-full h-56 bg-linear-to-br from-amber-950 via-orange-900/50 to-amber-950" />
+                )}
+
+                {/* Content */}
+                <div className="p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="inline-block px-3 py-1 text-sm font-semibold text-zinc-950 bg-amber-400 rounded-full">
+                      {project.category}
+                    </span>
+                    <span className="text-sm text-slate-500">{project.date}</span>
+                  </div>
+                  <h2 className="text-2xl font-bold text-white mb-3 group-hover:text-amber-300 transition-colors">
+                    {project.title}
+                  </h2>
+                  <p className="text-slate-300 leading-relaxed line-clamp-3 mb-6">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-xs bg-amber-950/50 text-amber-300 rounded-full border border-amber-700/50"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
+
               </article>
             </Link>
           ))}

@@ -2,7 +2,7 @@
 
 export default function AboutSection() {
   return (
-    <section id="about" className="px-6 py-24 relative">
+    <section id="about" className="px-6 py-20 relative">
       <div className="mx-auto max-w-6xl relative">
         <div className="grid gap-6 lg:grid-cols-[1fr_1.2fr] items-stretch">
           <div className="rounded-4xl bg-zinc-900 border-2 border-amber-500/30 p-10 shadow-lg shadow-amber-500/10 hover:shadow-amber-500/20 hover:border-amber-500/50 transition-all duration-300 animate-slide-in-left flex flex-col">
